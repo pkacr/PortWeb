@@ -1,8 +1,11 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/1.png";
+import projImg2 from "../assets/img/2.png";
+import projImg3 from "../assets/img/3.png";
+import projImg4 from "../assets/img/4.jpg";
+import projImg5 from "../assets/img/5.png";
+import projImg6 from "../assets/img/6.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,21 +14,35 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "React Portfolio Webside",
+      title: "React Portfolio Website",
       description: "Design & Development",
       imgUrl: projImg1,
-    },
+  },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Healthy Food Management Mobile Application",
+      description: "Designed UI for a mobile app ",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Flutter Clone App",
+      description: "Developed a movie app clone using Flutter.",
       imgUrl: projImg3,
     },
-    
+    {
+      title: "Web Board Project",
+      description: "Developed a web board.",
+      imgUrl: projImg5,
+    },
+    {
+      title: "Mini Project AI",
+      description: "Cat's Species Detection.",
+      imgUrl: projImg4,
+    },
+    {
+      title: "Mini Project MCP23008",
+      description: "Designed a PCB circuit using MCP23008 I/O Expander with I2C (4 LEDs, 3 switches) + I2C LCD.",
+      imgUrl: projImg6,
+    },
   ];
 
   return (
@@ -54,7 +71,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          projects.slice(0, 3).map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -68,7 +85,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="second"> 
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          projects.slice(3, 6).map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
